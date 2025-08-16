@@ -58,8 +58,8 @@ http://<your-ec2-public-ip>:5000
 docker exec -it <mysql-container-name> mysql -u root -p
 ```
    • Use the database:
-USE notes_db;
-SELECT * FROM notes;
+mysql> USE notes_db;
+mysql> SELECT * FROM notes;
 
 ————
 
