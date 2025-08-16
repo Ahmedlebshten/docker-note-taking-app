@@ -14,6 +14,7 @@ The app allows users to create and view notes, with persistent data storage via 
 	•	Bind Mount Volumes – Persistent storage between host and container
  • Git – Version control system
  • GitHub – Remote repository hosting
+
 ⸻
 
 ⚙️ Requirements
