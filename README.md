@@ -81,7 +81,7 @@ The MySQL container is connected to a host directory, ensuring data is not lost 
 
 Example in docker-compose.yml:
 volumes:
-
+  - ./mysql_data:/var/lib/mysql   
 ⸻
 
 📦 Pull image via DockerHub:
