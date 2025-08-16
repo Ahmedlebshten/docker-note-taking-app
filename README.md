@@ -6,7 +6,6 @@ The app allows users to create and view notes, with persistent data storage via 
 ⸻
 
 📌 Technologies Used:
-
 	•	Python (Flask) – Backend web framework
 	•	MySQL – Relational database
 	•	Docker – Containerization
@@ -19,7 +18,6 @@ The app allows users to create and view notes, with persistent data storage via 
 ⸻
 
 ⚙️ Requirements:
-
 • Docker (>= 20.x) – to run containers
 • Docker Compose (>= 1.29) – to manage and run multiple containers together
 • Git – to clone the project from GitHub
@@ -29,7 +27,6 @@ The app allows users to create and view notes, with persistent data storage via 
 ————
 
 🚀 How to Install Application:
-
 	1.	Clone the repository:
 git clone https://github.com/YourUsername/docker-note-taking-app.git
 cd docker-note-taking-app
@@ -44,7 +41,6 @@ http://<your-ec2-public-ip>:5000
 ————
 
 📂 How to Use the Application:
-
 	1.	Add a Note
 	•	Enter your note text in the form and click Add.
 	•	Your notes will be saved in MySQL via Docker Bind Mounts for persistence.
@@ -60,7 +56,6 @@ SELECT * FROM notes;
 ————
 
 📦 Bind Mount Volumes:
-
 This project uses Bind Mounts to persist MySQL data outside the container.
 The MySQL container is connected to a host directory, ensuring data is not lost when the container restarts.
 
