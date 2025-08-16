@@ -24,7 +24,7 @@ The app allows users to create and view notes, with persistent data storage via 
     • AWS EC2 Instance (Ubuntu 20.04 recommended) – if running the app on Amazon Cloud
     • MySQL client (optional) – to access the database from outside the container
 
-————
+⸻
 
 🚀 How to Install Application:
  1.	Clone the repository:
@@ -32,7 +32,19 @@ The app allows users to create and view notes, with persistent data storage via 
 git clone https://github.com/YourUsername/docker-note-taking-app.git
 cd docker-note-taking-app
 ```
- 2.	Start the containers:
+ 2.	create .env file
+```
+touch .env 
+vim .env
+````
+Content of .env file:
+FLASK_ENV=development
+DB_HOST=db
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=notes
+
+ 3.	Start the containers:
 ```
 docker-compose up -d
 ```
@@ -44,7 +56,7 @@ docker ps
 Open your browser and go to:
 http://<your-ec2-public-ip>:5000
 
-————
+⸻
 
 📂 How to Use the Application:
 	1.	Add a Note
@@ -56,12 +68,12 @@ http://<your-ec2-public-ip>:5000
 	•	Connect to MySQL from the host:
  ```
 docker exec -it <mysql-container-name> mysql -u root -p
-```
+ ```
    • Use the database:
 mysql> USE notes_db;
 mysql> SELECT * FROM notes;
 
-————
+⸻
 
 📦 Bind Mount Volumes:
 This project uses Bind Mounts to persist MySQL data outside the container.
@@ -69,5 +81,14 @@ The MySQL container is connected to a host directory, ensuring data is not lost 
 
 Example in docker-compose.yml:
 volumes:
+
+⸻
+
+📦 Pull image via DockerHub:
+You can pull this image from DockerHub with:
+
+docker pull ahmedlebshten/my-flask-app:v1
+
+
   - ./mysql_data:/var/lib/mysql
 
