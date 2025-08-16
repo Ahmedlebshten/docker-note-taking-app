@@ -38,6 +38,7 @@ touch .env
 vim .env
 ````
 Content of .env file:
+
 FLASK_ENV=development
 DB_HOST=db
 DB_USER=root
@@ -81,7 +82,8 @@ The MySQL container is connected to a host directory, ensuring data is not lost 
 
 Example in docker-compose.yml:
 volumes:
-  - ./mysql_data:/var/lib/mysql   
+  - ./mysql_data:/var/lib/mysql
+    
 ⸻
 
 📦 Pull image via DockerHub:
@@ -90,5 +92,4 @@ You can pull this image from DockerHub with:
 docker pull ahmedlebshten/my-flask-app:v1
 
 
-  - ./mysql_data:/var/lib/mysql
 
